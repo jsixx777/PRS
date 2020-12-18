@@ -6,7 +6,12 @@
 header{
     background: white;
     text-align: center;
+    padding: 20px 20px;
     
+}
+
+header > h1{
+    font-family: sans-serif;
 }
 body{
     background-color: black;
@@ -16,12 +21,62 @@ body{
     width: 200px;
     border: 3px solid white;
     border-radius: 4px;
+    text-align: center;
+    padding: 20px 20px;
+    position: relative;
+    color: white;
+    font-size: x-large;
     
 }
 .badge{
     background: red;
-    padding: 15px 20px;
+    padding: 2px 10px;
+    color: white;
+   
 }
+#box-for-player {
+    position: absolute;
+    top: 15px;
+    left: -30px;
+}
+#box-for-comp{
+    position: absolute;
+    top: 15px;
+    right: -30px;
+}
+.message-display{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+.pics-from-imgs{
+    text-align: center;
+}
+#rock{
+    border: 3px solid white;
+    padding: 20px;
+    margin: 30px 20px;
+    border-radius: 50%;
+}
+#paper{
+    border: 3px solid white;
+    padding: 20px;
+    margin: 30px 20px;
+    border-radius: 50%;
+}
+#scissors{
+    border: 3px solid white;
+    padding: 20px;
+    margin: 30px 20px;
+    border-radius: 50%;
+}
+.try-it{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
 
 
 
