@@ -58,17 +58,29 @@ body{
     margin: 30px 20px;
     border-radius: 50%;
 }
+#rock:hover{
+    background-color: teal;
+    cursor: pointer;
+}
 #paper{
     border: 3px solid white;
     padding: 20px;
     margin: 30px 20px;
     border-radius: 50%;
 }
+#paper:hover{
+    background-color: teal;
+    cursor: pointer;
+}
 #scissors{
     border: 3px solid white;
     padding: 20px;
     margin: 30px 20px;
     border-radius: 50%;
+}
+#scissors:hover{
+    background-color: teal;
+    cursor: pointer;
 }
 .try-it{
     color: white;
