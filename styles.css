@@ -61,7 +61,7 @@ body{
 }
 .imagesmine:hover{
     cursor: pointer;
-    background-color: teal;
+    background-color: black;
     transition: all .5s ease;
 }
 

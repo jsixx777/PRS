@@ -9,69 +9,74 @@ const paperMe = document.getElementById("paper");
 const scissorsMe = document.getElementById("scissors");
 
 function getComputerChoice() {
-  const choices = ["rocky", "papel", "tijeras"];
+  const choices = ["rock", "paper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
 
 function convert(something){
-  if (something === 'papel') return 'Paper';
-  if (something === 'rocky') return 'Rock';
-  if (something === 'tijeras') return 'Scissors';
+  if (something === 'paper') return 'Paper';
+  if (something === 'rock') return 'Rock';
+  if (something === 'scissors') return 'Scissors';
     
 }
 
 function win(usersChoice, computerChoice){
+  const smallWord = 'user'.fontsize(4).fontcolor('red');
+  const smallComp = 'comp'.fontsize(4).fontcolor('red');
   userScore ++;
   currentUserScore.innerHTML = userScore;
   currentCompScore.innerHTML = compScore;
-  const smallWord = 'user'.fontsize(4).fontcolor('red');
-  const smallComp = 'comp'.fontsize(4).fontcolor('red');
   resultMessage.innerHTML = `${convert(usersChoice)}${smallWord} beats ${convert(computerChoice)}${smallComp}.  You Win!`
   document.getElementById(usersChoice).classList.add('green-glow');
+  setTimeout(() => document.getElementById(usersChoice).classList.remove('green-glow'), 500);
 }
 
 function lose(usersChoice, computerChoice){
+  const smallWord = 'user'.fontsize(4).fontcolor('red');
+  const smallComp = 'comp'.fontsize(4).fontcolor('red');
   compScore ++;
   currentUserScore.innerHTML = userScore;
   currentCompScore.innerHTML = compScore;
-  const smallWord = 'user'.fontsize(4).fontcolor('red');
-  const smallComp = 'comp'.fontsize(4).fontcolor('red');
   resultMessage.innerHTML = `${convert(computerChoice)}${smallComp} beats ${convert(usersChoice)}${smallWord}. You Lose!`
+  document.getElementById(usersChoice).classList.add('red-glow');
+  setTimeout(() => document.getElementById(usersChoice).classList.remove('red-glow'), 500);
 }
 
 function draw(usersChoice, computerChoice){
-  currentUserScore.innerHTML = userScore;
-  currentCompScore.innerHTML = compScore;
   const smallWord = 'user'.fontsize(4).fontcolor('red');
   const smallComp = 'comp'.fontsize(4).fontcolor('red');
+  currentUserScore.innerHTML = userScore;
+  currentCompScore.innerHTML = compScore;
   resultMessage.innerHTML = `${convert(computerChoice)}${smallComp} equals ${convert(usersChoice)}${smallWord}. Draw Draw Draw!`
+  document.getElementById(usersChoice).classList.add('gray-glow');
+  setTimeout(() => document.getElementById(usersChoice).classList.remove('gray-glow'), 500);
 }
 function game(usersChoice) {
   const computerChoice = getComputerChoice();
   switch (usersChoice + computerChoice) {
-    case "rockytijeras":
-    case "papelrocky":
-    case "tijeraspapel":
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
       win(usersChoice, computerChoice);
       break;
-    case "tijerasrocky":
-    case "rockypapel":
-    case "papeltijeras":
+    case "scissorsrock":
+    case "rockpaper":
+    case "paperscissors":
       lose(usersChoice, computerChoice);
       break;
-    case "rockyrocky":
-    case "papelpapel":
-    case "tijerastijeras":
+    case "rockrock":
+    case "paperpaper":
+    case "scissorsscissors":
       draw(usersChoice, computerChoice);
       break;
   }
 }
 
 function main() {
-  rockMe.addEventListener("click", () => game("rocky"));
-  paperMe.addEventListener("click", () => game("papel"));
-  scissorsMe.addEventListener("click", () => game("tijeras"));
+  rockMe.addEventListener("click", () => game("rock"));
+  paperMe.addEventListener("click", () => game("paper"));
+  scissorsMe.addEventListener("click", () => game("scissors"));
 }
 
 main();
