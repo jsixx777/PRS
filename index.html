@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paper Rock Scissors</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="talking-heads">
-    <h1>Paper Rock Scissors</h1>
-  </header>
-  <div class="score-board">
-    <div id="box-for-player" class="badge">User</div>
-    <div id="box-for-comp" class="badge">Comp</div>
-    <span id="the-user's-score">0</span>:<span id="the-comp's-score">0</span>
-  </div>
-  <div class="message-display">
-    <p>Paper Covers Rock.  You Win!</p>
-  </div>
-  <div class="pics-from-imgs">
-      <image src="images/rock.png" id="rock"></image>
-      <image src="images/paper.png" id="paper"></image>
-      <image src="images/scissors.png" id="scissors"></image>
-  </div>
-  <div class="try-it">
-    <p>Make Your Move.</p>
-  </div>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Rock Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="talking-heads">
+      <h1>Paper Rock Scissors</h1>
+    </header>
+    <div class="score-board">
+      <div id="box-for-player" class="badge">User</div>
+      <div id="box-for-comp" class="badge">Comp</div>
+      <span id="the-user's-score">0</span>:<span id="the-comp's-score">0</span>
+    </div>
+    <div class="message-display">
+      <p>Paper Covers Rock. You Win!</p>
+    </div>
+    <div class="pics-from-imgs">
+      <div class="imagesmine" id="rock">
+        <image src="images/rock.png"></image>
+      </div>
+      <div class="imagesmine" id="paper">
+        <image src="images/paper.png"></image>
+      </div>
+      <div class="imagesmine" id="scissors">
+        <image src="images/scissors.png"></image>
+      </div>
+    </div>
+    <div class="try-it">
+      <p>Make Your Move.</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
